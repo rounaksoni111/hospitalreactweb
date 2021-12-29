@@ -67,8 +67,6 @@ const Loggin = () => {
 
 
 
-
-
     return (
         <>
             <header>
@@ -155,7 +153,7 @@ const Loggin = () => {
                                 <input type="text" id="subject" className="form-control" value={password} placeholder="Enter password.." onChange={(event) => { setPassword(event.target.value); }} />
                             </div>
                         </div>
-                        <button type="login" className="btn btn-primary wow zoomIn" onClick={login}>Login</button>
+                        <button type="button" className="btn btn-primary wow zoomIn" onClick={login}>Login</button>
                         <h1 style={{ color: "red" }}>{errorMessage}</h1>
                     </form>
                 </div>
@@ -167,10 +165,10 @@ const Loggin = () => {
             <table id="Table">
                 <tbody>
                     <tr>
-                        <th> Id </th>
-                        <th> Name </th>
-                        <th> Email </th>
-                        <th> Subject</th>
+                        <th style={{width : "30px"}}> Id </th>
+                        <th style={{width : "100px"}}> Name </th>
+                        <th style={{width : "200px"}}> Email </th>
+                        <th style={{width : "80px"}}> Subject</th>
                         <th> Message</th>
                     </tr>
                     {
@@ -178,11 +176,11 @@ const Loggin = () => {
                             return (
 
                                 <tr key={key}>
-                                    <td>{value.id}</td>
-                                    <td>{value.name}</td>
-                                    <td>{value.email}</td>
-                                    <td>{value.subject}</td>
-                                    <td>{value.message}</td>
+                                    <td style={{textAlign : "center"}}>{value.id}</td>
+                                    <td style={{paddingLeft : "10px"}}>{value.name}</td>
+                                    <td style={{paddingLeft : "10px"}}>{value.email}</td>
+                                    <td style={{paddingLeft : "10px"}}>{value.subject}</td>
+                                    <td style={{paddingLeft : "10px", paddingRight : "10px"}}>{value.message}</td>
                                 </tr>
                             );
                         })
@@ -196,27 +194,27 @@ const Loggin = () => {
             <table id="Table">
                 <tbody>
                     <tr>
-                        <th> Id </th>
-                        <th> Name </th>
-                        <th> Email </th>
-                        <th> Date</th>
-                        <th> Disease</th>
-                        <th> Number</th>
-                        <th> Message</th>
+                        <th style={{width : "30px"}}> Id </th>
+                        <th style={{width : "100px"}}> Name </th>
+                        <th style={{width : "200px"}}> Email </th>
+                        <th style={{width : "210px"}}> Date</th>
+                        <th style={{width : "110px"}}> Disease</th>
+                        <th style={{width : "130px"}}> Number</th>
+                        <th style={{width : "auto"}}> Message</th>
                     </tr>
                     {
                         apointdata.map((value, key) => {
                             return (
 
                                 <tr key={key}>
-                                    <td>{value.id}</td>
-                                    <td>{value.name}</td>
-                                    <td>{value.email}</td>
-                                    <td>{value.date}</td>
-                                    <td>{value.disease}</td>
-                                    <td>{value.number}</td>
-                                    <td>{value.message}</td>
-                                </tr>
+                                    <td style={{textAlign : "center"}}>{value.id}</td>
+                                    <td style={{paddingLeft : "10px"}}>{value.name}</td>
+                                    <td style={{paddingLeft : "10px"}}>{value.email}</td>
+                                    <td style={{paddingLeft : "10px"}}>{value.date}</td>
+                                    <td style={{paddingLeft : "10px"}}>{value.disease}</td>
+                                    <td style={{paddingLeft : "10px"}}>{value.number}</td>
+                                    <td style={{paddingLeft : "10px", paddingRight : "10px"}}>{value.message}</td>
+                                    </tr>
                             );
                         })
                     }
@@ -272,7 +270,7 @@ const Loggin = () => {
 
                     <hr />
 
-                    <p id="copyright">Copyright &copy; 2020 <a href="https://macodeid.com/" target="/">MACode ID</a>. All right reserved</p>
+                    <p id="copyright">Copyright &copy; 2022 <a href="https://macodeid.com/" target="/">MACode ID</a>. All right reserved</p>
                 </div>
             </footer>
         </>

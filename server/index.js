@@ -24,12 +24,12 @@ app.use(express.urlencoded({ extended: false }));
 
 // Point static path to dist
 // -------------------------------
-if (env === 'dev' || env === 'uat' || env === 'prod') {
-    app.use('/', express.static(path.join(__dirname, 'dist')));
-    app.use('/dist', express.static(path.join(__dirname, 'dist')));
+if (env === 'dev' || env === 'uat' || env === 'build') {
+    app.use('/', express.static(path.join(__dirname, 'build')));
+    app.use('/build', express.static(path.join(__dirname, 'build')));
 } else if (env === 'test') {
-    app.use('/', express.static(path.join(__dirname, '..', 'dist')));
-    app.use('/dist', express.static(path.join(__dirname, '..', 'dist')));
+    app.use('/', express.static(path.join(__dirname, '..', 'build')));
+    app.use('/build', express.static(path.join(__dirname, '..', 'build')));
 } else {
     app.use('/', express.static(path.join(__dirname, '..', 'src')));
     app.use('/src', express.static(path.join(__dirname, '..', 'src')));
@@ -37,9 +37,11 @@ if (env === 'dev' || env === 'uat' || env === 'prod') {
   
 
 app.use("/api/v1/user", require("./routes/user"));
-
+app.use('/api/get-file', require('./utils/getDownloadFile'));
 
 app.use("/upload", require("./routes/upload"));
+
+
 
 app.use('/', require('./routes'));
 

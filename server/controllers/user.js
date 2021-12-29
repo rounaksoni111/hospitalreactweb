@@ -103,7 +103,7 @@ const appointment  = async (req, res, next) => {
       number: req.body.number,  
       message: req.body.message,
     }
-    console.log(params);
+    // console.log(params);
     const UserModel = new User(params);
     const ress = await UserModel.appointment ();
     res.send(ress);

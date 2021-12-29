@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import UserAPI from '../api/user';
+import { API_URL } from '../api/config/URLs';
 
 const Doctor = () => {
 
@@ -122,7 +123,8 @@ const Doctor = () => {
                                 <div className="col-md-6 col-lg-4 py-3 wow zoomIn">
                                     <div className="card-doctor">
                                         <div className="header">
-                                            <img src="./assets/img/doctors/doctor_1.jpg" alt="" />
+                                            {/* <img src="./assets/img/doctors/doctor_1.jpg" alt="" /> */}
+                                            <img src={`${API_URL}/api/get-file?path=doctorImages/doctor_1.jpg`} alt="" />
                                             <div className="meta">
                                                 <a href="/"><span className="mai-call"></span></a>
                                                 <a href="/"><span className="mai-logo-whatsapp"></span></a>
@@ -324,7 +326,7 @@ const Doctor = () => {
 
                     <hr />
 
-                    <p id="copyright">Copyright &copy; 2020 <a href="https://macodeid.com/" target="/">MACode ID</a>. All right reserved</p>
+                    <p id="copyright">Copyright &copy; 2022 <a href="https://macodeid.com/" target="/">MACode ID</a>. All right reserved</p>
                 </div>
             </footer>
         </>

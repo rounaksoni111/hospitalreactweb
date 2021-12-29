@@ -5,29 +5,29 @@ const Home = () => {
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [date, setDate]  = useState("");
+  const [date, setDate] = useState("");
   const [disease, setDisease] = useState("");
   const [number, setNumber] = useState("");
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-        localStorage.setItem("loggedIn", true);
-}, []);
-  
+    localStorage.setItem("loggedIn", true);
+  }, []);
+
   const appointment = async () => {
     const res = await UserAPI.appointment({
-        name: name,
-        email: email,
-        date: date,
-        disease: disease,
-        number: number,
-        message: message
+      name: name,
+      email: email,
+      date: date,
+      disease: disease,
+      number: number,
+      message: message
     }).then((response) => {
-        console.log(response);
-        alert('appointment received');
+      console.log(response);
+      alert('appointment received');
     });
     console.log(res);
-};
+  };
 
   return (
     <>
@@ -153,7 +153,7 @@ const Home = () => {
               <div className="col-lg-6 py-3 wow fadeInUp">
                 <h1>Welcome to Your Health <br /> Center</h1>
                 <p className="text-grey mb-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Accusantium aperiam earum ipsa eius, inventore nemo labore eaque porro consequatur ex aspernatur. Explicabo, excepturi accusantium! Placeat voluptates esse ut optio facilis!</p>
-                <a href="about" className="btn btn-primary">Learn More</a>
+                <a href="aboutus" className="btn btn-primary">Learn More</a>
               </div>
               <div className="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
                 <div className="img-place custom-img-1">
@@ -340,10 +340,10 @@ const Home = () => {
           <form className="main-form">
             <div className="row mt-5 ">
               <div className="col-12 col-sm-6 py-2 wow fadeInLeft">
-                <input type="text" className="form-control" placeholder="Full name" onChange={(event) => { setName(event.target.value) }}/>
+                <input type="text" className="form-control" placeholder="Full name" onChange={(event) => { setName(event.target.value) }} />
               </div>
               <div className="col-12 col-sm-6 py-2 wow fadeInRight">
-                <input type="text" className="form-control" placeholder="Email address.." onChange={(event) => { setEmail(event.target.value) }}/>
+                <input type="text" className="form-control" placeholder="Email address.." onChange={(event) => { setEmail(event.target.value) }} />
               </div>
               <div className="col-12 col-sm-6 py-2 wow fadeInLeft" data-wow-delay="300ms">
                 <input type="date" className="form-control" onChange={(event) => { setDate(event.target.value) }} />
@@ -435,7 +435,7 @@ const Home = () => {
 
           <hr />
 
-          <p id="copyright">Copyright &copy; 2020 <a href="https://macodeid.com/" target="/">MACode ID</a>. All right reserved</p>
+          <p id="copyright">Copyright &copy; 2022 <a href="https://macodeid.com/" target="/">MACode ID</a>. All right reserved</p>
         </div>
       </footer>
     </>

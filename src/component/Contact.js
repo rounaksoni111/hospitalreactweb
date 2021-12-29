@@ -209,7 +209,7 @@ const Contact = () => {
 
                     <hr />
 
-                    <p id="copyright">Copyright &copy; 2020 <a href="https://macodeid.com/" target="/">MACode ID</a>. All right reserved</p>
+                    <p id="copyright">Copyright &copy; 2022 <a href="https://macodeid.com/" target="/">MACode ID</a>. All right reserved</p>
                 </div>
             </footer>
         </div>
