@@ -113,7 +113,7 @@ const Doctor = () => {
                 </div>
             </div>
 
-            <div className="page-section bg-light">
+            <div className="  page-section bg-light">
                 <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-lg-10">
