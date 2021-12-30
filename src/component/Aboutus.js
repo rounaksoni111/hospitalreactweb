@@ -16,7 +16,6 @@ const Aboutus = () => {
 
             <div className="page-banner overlay-dark bg-image" style={{ backgroundImage: `url(${API_URL}/api/get-file?path=bg_image_1.jpg)` }}>
             {/* <div className="page-banner overlay-dark bg-image" style={{ backgroundImage: `url("./assets/img/bg_image_1.jpg")` }}> */}
-            {/* <div className="page-section banner-home bg-image" style={{ backgroundImage: `url(${API_URL}/api/get-file?path=banner-pattern.svg)` }}> */}
                 <div className="banner-section">
                     <div className="container text-center wow fadeInUp">
                         <nav aria-label="Breadcrumb">
