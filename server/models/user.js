@@ -9,8 +9,7 @@ var User = function (params) {
   this.password = params.password;
   this.date = params.date;
   this.disease = params.disease;
-  this.number = params.number;
-
+  this.number = params.number; 
 };
 
 User.prototype.submit = async function () {
