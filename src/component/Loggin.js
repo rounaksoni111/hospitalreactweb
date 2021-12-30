@@ -4,7 +4,7 @@ import Footer from '../Pages/Footer';
 import Googlead from '../Pages/Googlead';
 import Header from '../Pages/Header';
 import './tab.css'
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Loggin = () => {
 
@@ -13,9 +13,9 @@ const Loggin = () => {
     const [errorMessage, setErrorMessage] = useState("");
     const [data, setData] = useState([]);
     const [apointdata, setApointdata] = useState([]);
+    const [logoutBtn, setlogoutBtn] = useState(true)
 
 
-    // let Navigate = useNavigate()
     useEffect(() => {
         if (localStorage.getItem("loggedIn")) {
             localStorage.setItem("loggedIn", true);
@@ -35,13 +35,7 @@ const Loggin = () => {
             });
     };
 
-    const remContact = () => {
-        setData([]);
-    }
-
-    const hiddAppointmet = () => {
-        setApointdata([]);
-    }
+   
 
     const login = async () => {
         const response = await UserAPI.login({
@@ -55,6 +49,7 @@ const Loggin = () => {
             setErrorMessage(response.email);
             UserAPI.getContact({}).then((response) => {
                 setData(response);
+                setlogoutBtn(false);
             });
             UserAPI.showAppointment({}).then((response) => {
                 setApointdata(response);
@@ -67,13 +62,21 @@ const Loggin = () => {
         }
     };
 
-
+    let Navigate = useNavigate()
+    const logout = () => {
+        setData([]);
+        setApointdata([]);
+        setlogoutBtn(true);
+        setEmail([]);
+        setPassword([]);
+        setErrorMessage("");
+        Navigate("/loginn");
+    }
 
 
     return (
         <>
             <Header/>
-
 
             <div className="page-section">
                 <div className="container">
@@ -90,14 +93,13 @@ const Loggin = () => {
                             </div>
                         </div>
                         <button type="button" className="btn btn-primary wow zoomIn" onClick={login}>Login</button>
+                        <button type="button" className="btn btn-primary wow zoomIn ml-5" disabled={logoutBtn} onClick={logout}>Logout</button>
                         <h1 style={{ color: "red" }}>{errorMessage}</h1>
                     </form>
                 </div>
             </div>
 
-            <button className="ml-5" onClick={getContact}> Show Contact </button>
-            <button className="ml-5" onClick={remContact}> Hide Contact</button>
-
+            <button className="btn btn-primary wow zoomIn ml-5" onClick={getContact}> Show Contact </button>
             <table id="Table">
                 <tbody>
                     <tr>
@@ -124,14 +126,12 @@ const Loggin = () => {
                 </tbody>
             </table>
                 
-            <button className="ml-5" onClick={showAppointment}> Show Appointment </button>
-            <button className="ml-5" onClick={hiddAppointmet}> Hide Appointment</button>
-
+            <button className="btn btn-primary wow zoomIn ml-5" onClick={showAppointment}> Show Appointment </button>
             <table id="Table">
                 <tbody>
                     <tr>
-                        <th style={{width : "30px"}}> Id </th>
-                        <th style={{width : "100px"}}> Name </th>
+                        <th style={{width : "50px"}}> Id </th>
+                        <th style={{width : "130px"}}> Name </th>
                         <th style={{width : "200px"}}> Email </th>
                         <th style={{width : "210px"}}> Date</th>
                         <th style={{width : "110px"}}> Disease</th>
