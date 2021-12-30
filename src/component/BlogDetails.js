@@ -82,8 +82,10 @@ const BlogDetails = () => {
                                         <label htmlFor="message">Message</label>
                                         <textarea name="msg" id="message" cols="30" rows="8" className="form-control"></textarea>
                                     </div>
-                                    <div className="form-group">
-                                        <input type="submit" value="Post Comment" className="btn btn-primary" />
+                                    <div className="form-group"> 
+                                        <a href="/contact">
+                                            <input type="submit" value="Post Comment" className="btn btn-primary"  />
+                                        </a>
                                     </div>
 
                                 </form>
