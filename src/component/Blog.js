@@ -10,7 +10,7 @@ const Blog = () => {
 
             <div className="back-to-top"></div>
 
-            <Header/>
+            <Header />
 
             <div className="page-banner overlay-dark bg-image" style={{ backgroundImage: `url(${API_URL}/api/get-file?path=bg_image_1.jpg)` }} >
                 <div className="banner-section">
@@ -38,7 +38,8 @@ const Blog = () => {
                                                 <a href="/">Covid19</a>
                                             </div>
                                             <a href="blogdetails" className="post-thumb">
-                                                <img src="./assets/img/blog/blog_1.jpg" alt="" />
+                                                <img src={`${API_URL}/api/get-file?path=blog/blog_1.jpg`} alt="" />
+                                                {/* <img src="./assets/img/blog/blog_1.jpg" alt="" /> */}
                                             </a>
                                         </div>
                                         <div className="body">
@@ -46,7 +47,8 @@ const Blog = () => {
                                             <div className="site-info">
                                                 <div className="avatar mr-2">
                                                     <div className="avatar-img">
-                                                        <img src="./assets/img/person/person_1.jpg" alt="" />
+                                                        {/* <img src="./assets/img/person/person_1.jpg" alt="" /> */}
+                                                        <img src={`${API_URL}/api/get-file?path=person/person_1.jpg`} alt="" />
                                                     </div>
                                                     <span>Roger Adams</span>
                                                 </div>
@@ -63,7 +65,8 @@ const Blog = () => {
                                                 <a href="/">Dental</a>
                                             </div>
                                             <a href="blogdetails" className="post-thumb">
-                                                <img src="./assets/img/blog/blog_3.jpg" alt="" />
+                                                {/* <img src="./assets/img/blog/blog_3.jpg" alt="" /> */}
+                                                <img src={`${API_URL}/api/get-file?path=blog/blog_3.jpg`} alt="" />
                                             </a>
                                         </div>
                                         <div className="body">
@@ -71,7 +74,8 @@ const Blog = () => {
                                             <div className="site-info">
                                                 <div className="avatar mr-2">
                                                     <div className="avatar-img">
-                                                        <img src="./assets/img/person/person_4.jpg" alt="" />
+                                                        {/* <img src="./assets/img/person/person_4.jpg" alt="" /> */}
+                                                        <img src={`${API_URL}/api/get-file?path=person/person_4.jpg`} alt="" />
                                                     </div>
                                                     <span>Wizdom Jack</span>
                                                 </div>
@@ -88,7 +92,8 @@ const Blog = () => {
                                                 <a href="/">Covid19</a>
                                             </div>
                                             <a href="blogdetails" className="post-thumb">
-                                                <img src="./assets/img/blog/blog_3.jpg" alt="" />
+                                                {/* <img src="./assets/img/blog/blog_3.jpg" alt="" /> */}
+                                                <img src={`${API_URL}/api/get-file?path=blog/blog_3.jpg`} alt="" />
                                             </a>
                                         </div>
                                         <div className="body">
@@ -96,7 +101,8 @@ const Blog = () => {
                                             <div className="site-info">
                                                 <div className="avatar mr-2">
                                                     <div className="avatar-img">
-                                                        <img src="./assets/img/person/person_3.jpg" alt="" />
+                                                    <img src={`${API_URL}/api/get-file?path=person/person_3.jpg`} alt="" />
+                                                        {/* <img src="./assets/img/person/person_3.jpg" alt="" /> */}
                                                     </div>
                                                     <span>Adams Collier</span>
                                                 </div>
@@ -112,7 +118,8 @@ const Blog = () => {
                                                 <a href="/">Neurology</a>
                                             </div>
                                             <a href="blogdetails" className="post-thumb">
-                                                <img src="./assets/img/blog/blog_4.jpg" alt="" />
+                                                {/* <img src="./assets/img/blog/blog_4.jpg" alt="" /> */}
+                                                <img src={`${API_URL}/api/get-file?path=blog/blog_4.jpg`} alt="" />
                                             </a>
                                         </div>
                                         <div className="body">
@@ -120,7 +127,8 @@ const Blog = () => {
                                             <div className="site-info">
                                                 <div className="avatar mr-2">
                                                     <div className="avatar-img">
-                                                        <img src="./assets/img/person/person_1.jpg" alt="" />
+                                                        <img src={`${API_URL}/api/get-file?path=person/person_1.jpg`} alt="" />
+                                                        {/* <img src="./assets/img/person/person_1.jpg" alt="" /> */}
                                                     </div>
                                                     <span>Roger Adams</span>
                                                 </div>
@@ -136,7 +144,8 @@ const Blog = () => {
                                                 <a href="/">Cardiology</a>
                                             </div>
                                             <a href="blogdetails" className="post-thumb">
-                                                <img src="./assets/img/blog/blog_5.jpg" alt="" />
+                                            <img src={`${API_URL}/api/get-file?path=blog/blog_5.jpg`} alt="" />
+                                                {/* <img src="./assets/img/blog/blog_5.jpg" alt="" /> */}
                                             </a>
                                         </div>
                                         <div className="body">
@@ -144,7 +153,8 @@ const Blog = () => {
                                             <div className="site-info">
                                                 <div className="avatar mr-2">
                                                     <div className="avatar-img">
-                                                        <img src="./assets/img/person/person_1.jpg" alt="" />
+                                                    <img src={`${API_URL}/api/get-file?path=person/person_1.jpg`} alt="" />
+                                                        {/* <img src="./assets/img/person/person_1.jpg" alt="" /> */}
                                                     </div>
                                                     <span>Roger Adams</span>
                                                 </div>
@@ -160,7 +170,8 @@ const Blog = () => {
                                                 <a href="/">Patient Services</a>
                                             </div>
                                             <a href="blogdetails" className="post-thumb">
-                                                <img src="./assets/img/blog/blog_1.jpg" alt="" />
+                                            <img src={`${API_URL}/api/get-file?path=blog/blog_1.jpg`} alt="" />
+                                                {/* <img src="./assets/img/blog/blog_1.jpg" alt="" /> */}
                                             </a>
                                         </div>
                                         <div className="body">
@@ -168,7 +179,8 @@ const Blog = () => {
                                             <div className="site-info">
                                                 <div className="avatar mr-2">
                                                     <div className="avatar-img">
-                                                        <img src="./assets/img/person/person_1.jpg" alt="" />
+                                                    <img src={`${API_URL}/api/get-file?path=person/person_1.jpg`} alt="" />
+                                                        {/* <img src="./assets/img/person/person_1.jpg" alt="" /> */}
                                                     </div>
                                                     <span>Roger Adams</span>
                                                 </div>
@@ -184,7 +196,8 @@ const Blog = () => {
                                                 <a href="/">General Health</a>
                                             </div>
                                             <a href="blogdetails" className="post-thumb">
-                                                <img src="./assets/img/blog/blog_2.jpg" alt="" />
+                                            <img src={`${API_URL}/api/get-file?path=blog/blog_2.jpg`} alt="" />
+                                                {/* <img src="./assets/img/blog/blog_2.jpg" alt="" /> */}
                                             </a>
                                         </div>
                                         <div className="body">
@@ -192,7 +205,8 @@ const Blog = () => {
                                             <div className="site-info">
                                                 <div className="avatar mr-2">
                                                     <div className="avatar-img">
-                                                        <img src="./assets/img/person/person_1.jpg" alt="" />
+                                                    <img src={`${API_URL}/api/get-file?path=person/person_1.jpg`} alt="" />
+                                                        {/* <img src="./assets/img/person/person_1.jpg" alt="" /> */}
                                                     </div>
                                                     <span>Roger Adams</span>
                                                 </div>
@@ -209,7 +223,8 @@ const Blog = () => {
                                                 <a href="/">Covid19</a>
                                             </div>
                                             <a href="blogdetails" className="post-thumb">
-                                                <img src="./assets/img/blog/blog_2.jpg" alt="" />
+                                            <img src={`${API_URL}/api/get-file?path=blog/blog_2.jpg`} alt="" />
+                                                {/* <img src="./assets/img/blog/blog_2.jpg" alt="" /> */}
                                             </a>
                                         </div>
                                         <div className="body">
@@ -217,7 +232,8 @@ const Blog = () => {
                                             <div className="site-info">
                                                 <div className="avatar mr-2">
                                                     <div className="avatar-img">
-                                                        <img src="./assets/img/person/person_2.jpg" alt="" />
+                                                    <img src={`${API_URL}/api/get-file?path=person/person_2.jpg`} alt="" />
+                                                        {/* <img src="./assets/img/person/person_2.jpg" alt="" /> */}
                                                     </div>
                                                     <span>Diego Simmons</span>
                                                 </div>
@@ -274,7 +290,8 @@ const Blog = () => {
                                     <h3 className="sidebar-title">Recent Blog</h3>
                                     <div className="blog-item">
                                         <a className="post-thumb" href="/">
-                                            <img src="./assets/img/blog/blog_1.jpg" alt="" />
+                                            {/* <img src="./assets/img/blog/blog_1.jpg" alt="" /> */}
+                                            <img src={`${API_URL}/api/get-file?path=blog/blog_1.jpg`} alt="" />
                                         </a>
                                         <div className="content">
                                             <h5 className="post-title"><a href="/">Even the all-powerful Pointing has no control</a></h5>
@@ -287,7 +304,8 @@ const Blog = () => {
                                     </div>
                                     <div className="blog-item">
                                         <a className="post-thumb" href="/">
-                                            <img src="./assets/img/blog/blog_2.jpg" alt="" />
+                                            {/* <img src="./assets/img/blog/blog_2.jpg" alt="" /> */}
+                                            <img src={`${API_URL}/api/get-file?path=blog/blog_2.jpg`} alt="" />
                                         </a>
                                         <div className="content">
                                             <h5 className="post-title"><a href="/">Even the all-powerful Pointing has no control</a></h5>
@@ -300,7 +318,8 @@ const Blog = () => {
                                     </div>
                                     <div className="blog-item">
                                         <a className="post-thumb" href="/">
-                                            <img src="./assets/img/blog/blog_3.jpg" alt="" />
+                                        <img src={`${API_URL}/api/get-file?path=blog/blog_3.jpg`} alt="" />
+                                            {/* <img src="./assets/img/blog/blog_3.jpg" alt="" /> */}
                                         </a>
                                         <div className="content">
                                             <h5 className="post-title"><a href="/">Even the all-powerful Pointing has no control</a></h5>
@@ -337,9 +356,9 @@ const Blog = () => {
                 </div>
             </div>
 
-            <Googlead/>
+            <Googlead />
 
-            <Footer/>
+            <Footer />
         </>
     )
 }

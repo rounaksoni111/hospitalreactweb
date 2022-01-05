@@ -43,28 +43,28 @@ const Header = () => {
                             <span className="navbar-toggler-icon"></span>
                         </button>
 
-                        <div class="collapse navbar-collapse" id="navbarSupport">
-                            <ul class="navbar-nav ml-auto">
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="/">Home</a>
+                        <div className="collapse navbar-collapse" id="navbarSupport">
+                            <ul className="navbar-nav ml-auto">
+                                <li className="nav-item ">
+                                    <a className="nav-link" href="/">Home</a>
                                 </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link" href="aboutus">About Us </a>
+                                <li className="nav-item ">
+                                    <a className="nav-link" href="aboutus">About Us </a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="doctor">Doctors</a>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="doctor">Doctors</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="blog">News</a>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="blog">News</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="contact">Contact</a>
+                                <li className="nav-item">
+                                    <a className="nav-link" href="contact">Contact</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="btn btn-primary ml-lg-3" href="lgrg"> Register</a>
+                                <li className="nav-item">
+                                    <a className="btn btn-primary ml-lg-3" href="lgrg"> Register</a>
                                 </li>
-                                <li class="nav-item">
-                                    <a class="btn btn-primary ml-lg-3" href="loginn">Login </a>
+                                <li className="nav-item">
+                                    <a className="btn btn-primary ml-lg-3" href="loginn">Login </a>
                                 </li>
                             </ul>
                         </div>

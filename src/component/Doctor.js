@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { API_URL } from '../api/config/URLs';
 import Header from '../Pages/Header';
 import Footer from '../Pages/Footer';

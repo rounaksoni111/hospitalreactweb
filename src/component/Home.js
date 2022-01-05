@@ -72,7 +72,8 @@ const Home = () => {
                     <a href="/">Covid19</a>
                   </div>
                   <a href="blogdetails" className="post-thumb">
-                    <img src="./assets/img/blog/blog_1.jpg" alt="" />
+                  <img src={`${API_URL}/api/get-file?path=blog/blog_1.jpg`} alt="" />
+                    {/* <img src="./assets/img/blog/blog_1.jpg" alt="" /> */}
                   </a>
                 </div>
                 <div className="body">
@@ -80,7 +81,8 @@ const Home = () => {
                   <div className="site-info">
                     <div className="avatar mr-2">
                       <div className="avatar-img">
-                        <img src="./assets/img/person/person_1.jpg" alt="" />
+                      <img src={`${API_URL}/api/get-file?path=person/person_1.jpg`} alt="" />
+                        {/* <img src="./assets/img/person/person_1.jpg" alt="" /> */}
                       </div>
                       <span>Roger Adams</span>
                     </div>
@@ -96,7 +98,8 @@ const Home = () => {
                     <a href="/">Covid19</a>
                   </div>
                   <a href="blogdetails" className="post-thumb">
-                    <img src="./assets/img/blog/blog_2.jpg" alt="" />
+                  <img src={`${API_URL}/api/get-file?path=blog/blog_2.jpg`} alt="" />
+                    {/* <img src="./assets/img/blog/blog_2.jpg" alt="" /> */}
                   </a>
                 </div>
                 <div className="body">
@@ -104,7 +107,8 @@ const Home = () => {
                   <div className="site-info">
                     <div className="avatar mr-2">
                       <div className="avatar-img">
-                        <img src="./assets/img/person/person_1.jpg" alt="" />
+                      <img src={`${API_URL}/api/get-file?path=person/person_1.jpg`} alt="" />
+                        {/* <img src="./assets/img/person/person_1.jpg" alt="" /> */}
                       </div>
                       <span>Roger Adams</span>
                     </div>
@@ -120,7 +124,8 @@ const Home = () => {
                     <a href="/">Covid19</a>
                   </div>
                   <a href="blogdetails" className="post-thumb">
-                    <img src="./assets/img/blog/blog_3.jpg" alt="" />
+                  <img src={`${API_URL}/api/get-file?path=blog/blog_3.jpg`} alt="" />
+                    {/* <img src="./assets/img/blog/blog_3.jpg" alt="" /> */}
                   </a>
                 </div>
                 <div className="body">
@@ -128,7 +133,8 @@ const Home = () => {
                   <div className="site-info">
                     <div className="avatar mr-2">
                       <div className="avatar-img">
-                        <img src="./assets/img/person/person_2.jpg" alt="" />
+                      <img src={`${API_URL}/api/get-file?path=person/person_2.jpg`} alt="" />
+                        {/* <img src="./assets/img/person/person_2.jpg" alt="" /> */}
                       </div>
                       <span>Diego Simmons</span>
                     </div>
