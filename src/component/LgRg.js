@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import UserAPI from '../api/user';
 import Footer from '../Pages/Footer';
 import Googlead from '../Pages/Googlead';
@@ -52,6 +52,13 @@ const LgRg = () => {
         }
     }, [passwordErrors]);
 
+    useEffect(() => {
+        console.log(nameErrors);
+        if (Object.keys(nameErrors).length === 0 && isSubmit) {
+            console.log(name);
+        }
+    }, [nameErrors]);
+
     const NameValidation = (name) => {
         const reg = /^[A-Za-z\s]+$/;
         const errors = {};
@@ -68,10 +75,8 @@ const LgRg = () => {
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
         if (!email) {
             errors.email = "Email is required!";
-            // alert("Email is required!")
         } else if (!regex.test(email)) {
             errors.email = "This is not a valid email format!";
-            // alert("This is not a valid email format!")
         }
         return errors;
     };

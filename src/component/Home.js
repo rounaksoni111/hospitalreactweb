@@ -39,7 +39,6 @@ const Home = () => {
 
       <div className="bg-light">
         <ChatHealthPharma />
-
         <div className="page-section pb-0">
           <div className="container">
             <div className="row align-items-center">
