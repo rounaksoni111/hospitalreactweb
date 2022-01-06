@@ -23,17 +23,17 @@ const Loggin = () => {
     }, []);
 
 
-    const showAppointment = async () => {
-        UserAPI.showAppointment({}).then((response) => {
-            setApointdata(response);
-            });
-    };
+    // const showAppointment = async () => {
+    //     UserAPI.showAppointment({}).then((response) => {
+    //         setApointdata(response);
+    //         });
+    // };
 
-    const getContact = async () => {
-        UserAPI.getContact({}).then((response) => {
-                setData(response);
-            });
-    };
+    // const getContact = async () => {
+    //     UserAPI.getContact({}).then((response) => {
+    //             setData(response);
+    //         });
+    // };
 
    
 
@@ -99,7 +99,8 @@ const Loggin = () => {
                 </div>
             </div>
 
-            <button className="btn btn-primary wow zoomIn ml-5" onClick={getContact}> Show Contact </button>
+            {/* <button className="btn btn-primary wow zoomIn ml-5" onClick={getContact}> Show Contact </button> */}
+            <h4 style={{marginLeft : "50px", color: "green"}}>Contact</h4>
             <table id="Table">
                 <tbody>
                     <tr>
@@ -126,7 +127,8 @@ const Loggin = () => {
                 </tbody>
             </table>
                 
-            <button className="btn btn-primary wow zoomIn ml-5" onClick={showAppointment}> Show Appointment </button>
+            {/* <button className="btn btn-primary wow zoomIn ml-5" onClick={showAppointment}> Show Appointment </button> */}
+            <h4 style={{marginLeft : "50px", color: "green"}}>Appointment</h4>
             <table id="Table">
                 <tbody>
                     <tr>

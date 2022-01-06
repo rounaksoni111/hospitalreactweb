@@ -9,15 +9,19 @@ const LgRg = () => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [nameErrors, setNameErrors] = useState({});
     const [EmailErrors, setEmailErrors] = useState({});
+    const [passwordErrors, setPasswordErrors] = useState({});
     const [isSubmit, setIsSubmit] = useState(false);
 
 
     const register = async (e) => {
         e.preventDefault();
         setEmailErrors(Emailvalidate(email));
+        setNameErrors(NameValidation(name));
+        setPasswordErrors(PasswordValidation(password));
         setIsSubmit(true);
-        if (Object.keys(EmailErrors).length === 0 && isSubmit) {
+        if (Object.keys(EmailErrors).length === 0 && Object.keys(nameErrors).length === 0 && Object.keys(passwordErrors).length === 0 && isSubmit) {
             const res = await UserAPI.register({
                 name: name,
                 email: email,
@@ -41,6 +45,23 @@ const LgRg = () => {
         }
     }, [EmailErrors]);
 
+    useEffect(() => {
+        console.log(passwordErrors);
+        if (Object.keys(passwordErrors).length === 0 && isSubmit) {
+            console.log(password);
+        }
+    }, [passwordErrors]);
+
+    const NameValidation = (name) => {
+        const reg = /^[A-Za-z\s]+$/;
+        const errors = {};
+        if (!name) {
+            errors.name = "Name is required";
+        } else if (!reg.test(name)) {
+            errors.name = "Number not allow";
+        }
+        return errors;
+    };
 
     const Emailvalidate = (email) => {
         const errors = {};
@@ -51,6 +72,18 @@ const LgRg = () => {
         } else if (!regex.test(email)) {
             errors.email = "This is not a valid email format!";
             // alert("This is not a valid email format!")
+        }
+        return errors;
+    };
+
+    const PasswordValidation = (password) => {
+        const errors = {};
+        if (!password) {
+            errors.password = "Password is required";
+        } else if (password.length < 4) {
+            errors.password = "Password must be more than 4 characters";
+        } else if (password.length > 10) {
+            errors.password = "Password cannot exceed more than 10 characters";
         }
         return errors;
     };
@@ -67,6 +100,7 @@ const LgRg = () => {
                                 <label htmlFor="fullName">Name</label>
                                 <input type="text" id="fullName" className="form-control" value={name} placeholder="Full name.." onChange={(event) => { setName(event.target.value) }} />
                             </div>
+                            <p style={{ marginLeft: "20px", color: "red" }}>{nameErrors.name}</p>
                             <div className="col-12 py-2 wow fadeInRight">
                                 <label htmlFor="emailAddress">Email</label>
                                 <input type="email" id="emailAddress" className="form-control" value={email} placeholder="Email address.." onChange={(event) => { setEmail(event.target.value) }} />
@@ -76,6 +110,7 @@ const LgRg = () => {
                                 <label htmlFor="subject">Password</label>
                                 <input type="text" id="subject" className="form-control" value={password} placeholder="Create password.." onChange={(event) => { setPassword(event.target.value) }} />
                             </div>
+                            <p style={{ marginLeft: "20px", color: "red" }}>{passwordErrors.password}</p>
                         </div>
                         <button type="submit" className="btn btn-primary wow zoomIn" onClick={register} >Register</button>
                     </form>
