@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-const Header = () => {
+const Header = (props) => {
     return (
         <div>
             <header>
@@ -46,19 +46,19 @@ const Header = () => {
                         <div className="collapse navbar-collapse" id="navbarSupport">
                             <ul className="navbar-nav ml-auto">
                                 <li className="nav-item ">
-                                    <a className="nav-link" href="/">Home</a>
+                                    <a className={`nav-link ${props.status}`} href="/">Home</a>
                                 </li>
                                 <li className="nav-item ">
-                                    <a className="nav-link" href="aboutus">About Us </a>
+                                    <a className={`nav-link ${props.status2}`} href="aboutus">About Us </a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="doctor">Doctors</a>
+                                    <a className={`nav-link ${props.status3}`} href="doctor">Doctors</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="blog">News</a>
+                                    <a className={`nav-link ${props.status4}`} href="blog">News</a>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="contact">Contact</a>
+                                    <a className={`nav-link ${props.status5}`} href="contact">Contact</a>
                                 </li>
                                 <li className="nav-item">
                                     <a className="btn btn-primary ml-lg-3" href="lgrg"> Register</a>

@@ -24,7 +24,7 @@ const Home = () => {
       <div className="back-to-top"></div>
 
 
-      <Header />
+      <Header status="active"/>
 
       <div className="page-hero bg-image overlay-dark" style={{ backgroundImage: `url(${API_URL}/api/get-file?path=bg_image_1.jpg)` }}>
         <div className="hero-section">

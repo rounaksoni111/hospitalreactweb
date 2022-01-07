@@ -14,7 +14,7 @@ const Doctor = () => {
         <>
             <div className="back-to-top"></div>
 
-            <Header />
+            <Header status3="active" />
 
             <div className="page-banner overlay-dark bg-image" style={{ backgroundImage: `url(${API_URL}/api/get-file?path=bg_image_1.jpg)` }}>
                 <div className="banner-section">

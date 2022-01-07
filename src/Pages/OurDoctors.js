@@ -1,8 +1,8 @@
 import React from 'react';
 import { API_URL } from '../api/config/URLs';
-import DoctorDetails from './DoctorBlock';
+import DoctorBlock from './DoctorBlock';
 
-const OurDoctors = (props) => {
+const OurDoctors = () => {
     return (
         <>
             <div className="page-section ">
@@ -10,37 +10,37 @@ const OurDoctors = (props) => {
                     <div className="row justify-content-center">
                         <div className="col-lg-10">
                             <div className="row">
-                                <DoctorDetails
+                                <DoctorBlock
                                     imgsrc={`${API_URL}/api/get-file?path=doctorImages/doctor_1.jpg`}
                                     name="Dr. Stein Albert"
                                     specialist='Cardiology'
                                 />
 
-                                <DoctorDetails
+                                <DoctorBlock
                                     imgsrc={`${API_URL}/api/get-file?path=doctorImages/doctor_2.jpg`}
                                     name="Dr. Alexa Melvin"
                                     specialist='Dental'
                                 />
 
-                                <DoctorDetails
+                                <DoctorBlock
                                     imgsrc={`${API_URL}/api/get-file?path=doctorImages/doctor_3.jpg`}
                                     name="Dr. Rebecca Steffany"
                                     specialist='General Health'
                                 />
 
-                                <DoctorDetails
+                                <DoctorBlock
                                     imgsrc={`${API_URL}/api/get-file?path=doctorImages/doctor_1.jpg`}
                                     name="Dr. Stein Albert"
                                     specialist='Cardiology'
                                 />
 
-                                <DoctorDetails
+                                <DoctorBlock
                                     imgsrc={`${API_URL}/api/get-file?path=doctorImages/doctor_2.jpg`}
                                     name="Dr. Alexa Melvin"
                                     specialist='Dental'
                                 />
 
-                                <DoctorDetails
+                                <DoctorBlock
                                     imgsrc={`${API_URL}/api/get-file?path=doctorImages/doctor_3.jpg`}
                                     name="Dr. Rebecca Steffany"
                                     specialist='General Health'
