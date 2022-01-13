@@ -58,7 +58,7 @@ const Loggin = () => {
             // Navigate("/");
         } else {
             setErrorMessage(response.message);
-            alert("Wrong username/password");
+            // alert("Wrong username/password");
         }
     };
 
@@ -94,7 +94,7 @@ const Loggin = () => {
                         </div>
                         <button type="button" className="btn btn-primary wow zoomIn" onClick={login}>Login</button>
                         <button type="button" className="btn btn-primary wow zoomIn ml-5" disabled={logoutBtn} onClick={logout}>Logout</button>
-                        <h1 style={{ color: "red" }}>{errorMessage}</h1>
+                        <h5 style={{ color: "red", marginTop : "10px" }}>{errorMessage}</h5>
                     </form>
                 </div>
             </div>

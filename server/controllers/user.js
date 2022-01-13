@@ -47,13 +47,14 @@ const login = async (req, res, next) => {
     if (result.length > 0) {
       if (params.password == result[0].password) {
         // res.send("You are logged in!.");
-        res.send({ loggedIn: true, email: params.email , message : "you are logged in"});
+        // res.send({ loggedIn: true, email: params.email , message : "you are logged in"});
+        res.send({ loggedIn: true, email: params.email });
       } else {
         res.send({ loggedIn: false, message: "wrong email password combo!.." });
         // res.send("wrong email password combo!..");
       }
     } else {
-      res.send({ loggedIn: false, message: "user doesnt exist" });
+      res.send({ loggedIn: false, message: "user doesnt exist!.." });
       // res.send("user doesnt exist");
     }
   } catch (err) {
